@@ -1,0 +1,19 @@
+<a (click)="menuClick()" class="nav-link">
+    <i [class]="menuItem.icon"></i>
+    <span>
+        {{ menuItem.title }}
+    </span>
+    <span *ngIf="hasSubMenuItems()" class="pull-down-container">
+        <i class="fa fa-angle-down pull-down"></i>
+    </span>
+</a>
+<ul class="nav nav-pills nav-sidebar flex-column" *ngIf="hasSubMenuItems() && isMenuOpen">
+    <li class="nav-item" *ngFor="let subMenuItem of menuItem.subMenuItems">
+        <a routerLink="{{ subMenuItem.redirectUrl }}" class="nav-link">
+            <i class="{{ subMenuItem.icon }}" aria-hidden="true"></i>
+            <p>
+                {{ subMenuItem.title }}
+            </p>
+        </a>
+    </li>
+</ul>
