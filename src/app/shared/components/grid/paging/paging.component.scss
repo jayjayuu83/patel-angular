@@ -1,0 +1,10 @@
+.app-pagination-host {
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px){
+    .app-pagination-host {
+        margin-top: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,26 @@
+/* New custom nav */
+
+.poweredby_logo {position: absolute; bottom: 0; left: 0; text-align: center; width: 100%; padding: 10px 5px; border-top: 1px solid rgba(0,0,0,.1)}
+.poweredby_logo b {font-size: 10px; display: block; font-weight: 400; margin-bottom: 5px;}
+
+.custNav {margin: 0; padding: 0}
+.custNav > .navLi {position: relative; border-bottom: 1px solid rgba(0,0,0,.1)}
+.custNav > .navLi > a {display: block; text-align: left; position: relative; padding: 1rem; transition: 0.3s all ease;}
+.custNav > .navLi > a > span {font-weight: 300; color: #596168; font-size: 14px; transition: 0.3s all ease;}
+.custNav > .navLi > a > i {width: 30px; margin-right: 5px; display: inline-block; text-align: center; filter: grayscale(1); opacity: 0.5; transition: 0.3s all ease; transition: 0.3s all ease;}
+.custNav > .navLi > a:after {position: absolute; top: 18px; right: 15px; font-family: 'Font Awesome 5 Free'; font-weight: 900; content: '\f105'; color: #999; transition: 0.3s all ease}
+.custNav > .navLi:before {position: absolute; top: 50%; height: 0; left: 0; width: 5px; opacity: 0; transition: 0.3s all ease; content: ""; border-radius: 0 10px 10px 0; background-color: #FD6966}
+.custNav > .navLi:hover:before, .custNav > .navLi.active:before {top: 0; height: 100%; opacity: 1; transition: 0.3s all ease;}
+.custNav > .navLi:hover a:after, .custNav > .navLi.active a:after {transition: 0.3s all ease; transform: rotate(90deg);}
+.custNav > .navLi:hover > a > span, .custNav > .navLi.active > a > span {color: #37474f !important; font-weight: 600}
+.custNav > .navLi:hover > a > i, .custNav > .navLi.active > a > i {transition: 0.3s all ease; filter: grayscale(0);opacity: 1;}
+.custNav > .navLi:hover .cust_subnav {display: block;}
+.cust_subnav {display: none; background-color: white; border-radius: 0 5px 5px 0; border-left : 1px solid #ccc; padding: 5px; box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,.15); z-index: 99;}
+.cust_subnav a {display: block; white-space: nowrap; padding: 6px 15px; color: #a8abb0; border-radius: 5px; font-size: 12px}
+.cust_subnav a.active {color: #455a64 !important; font-weight: 700}
+.cust_subnav a:hover {background-color: #eaecf4; color: #455a64}
+
+.sidebar.toggled .custNav > .navLi > a {text-align: center; padding: 12px 5px; transition: 0.3s all ease;}
+.sidebar.toggled .custNav > .navLi > a > span {font-size: 11px; display: block; transition: 0.3s all ease;}
+.sidebar.toggled .cust_subnav {position: absolute; top: 0px; left: 80px}
+.sidebar.toggled .custNav > .navLi > a:after {display: none;}
